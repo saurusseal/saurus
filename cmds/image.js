@@ -13,7 +13,7 @@ mentioned.removeRole(role, 'Take pic perms');
 message.channel.send(embed.setDescription('Removed image perms from ' + mentioned.user.tag));
 }
 else {
-mentioned.removeRole(role, 'Add pic perms');
+mentioned.addRole(role, 'Add pic perms');
 message.channel.send(embed.setDescription('Added image perms to ' + mentioned.user.tag));
 }
 }
