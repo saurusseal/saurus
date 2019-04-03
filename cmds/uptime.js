@@ -12,7 +12,7 @@ function msTime(milliseconds){
     }
         const embed = {
     "description": `${msTime(client.uptime)}`,
-    "color": client.resolver.resolveColor('RANDOM'),
+    "color": client.resolver.resolveColor('BLUE'),
     "footer": {},
      fields: []
   };
