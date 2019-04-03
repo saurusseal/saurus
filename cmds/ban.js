@@ -9,8 +9,8 @@ let mentioned = message.mentions.members.first() || message.guild.members.get(ar
 let reason = args.slice(1).join(' ') || 'No reason provided';
 const ban = await new Discord.RichEmbed().setDescription(`${mentioned.user.tag} was banned by ${message.author.toString()} for ${reason}`).setColor(client.resolver.resolveColor('RANDOM'));
 
-if(message.member.hasPermission('BAN_MEMBERS') != true) return message.channel.send(noperms2);
 if(!mentioned) return message.channel.send(nouser);
+if(message.member.hasPermission('BAN_MEMBERS') != true) return message.channel.send(noperms2);
 if(mentioned.bannable != true) return message.channel.send(noperms);
 if(mentioned.hasPermission('BAN_MEMBERS')) return message.channel.send(staff);
 try {
