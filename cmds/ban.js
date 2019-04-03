@@ -7,7 +7,7 @@ const noperms2 = await new Discord.RichEmbed().setDescription("You are missing t
 const staff = await new Discord.RichEmbed().setDescription("The mentioned user is a staff member.").setColor(client.resolver.resolveColor('RANDOM'));
 let mentioned = message.mentions.members.first() || message.guild.members.get(args[0]);
 let reason = args.slice(1).join(' ') || 'No reason provided';
-const ban = await new Discord.RichEmbed().setDescription(`${mentioned.user.tag} was banned by ${message.author.toString()} for ${reason}`).setColor(client.resolver.resolveColor('RANDOM'));
+const ban = await new Discord.RichEmbed().setDescription('').setColor(client.resolver.resolveColor('RANDOM'));
 
 if(!mentioned) return message.channel.send(nouser);
 if(message.member.hasPermission('BAN_MEMBERS') != true) return message.channel.send(noperms2);
@@ -15,7 +15,7 @@ if(mentioned.bannable != true) return message.channel.send(noperms);
 if(mentioned.hasPermission('BAN_MEMBERS')) return message.channel.send(staff);
 try {
 mentioned.ban(reason);
-message.channel.send(ban);
+message.channel.send(ban.setDescription(`${mentioned.user.tag} was banned by ${message.author.toString()} for ${reason}`));
 }
 catch(e) {
 return message.channel.send(noperms.setDescription(e));
