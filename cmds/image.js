@@ -3,7 +3,7 @@ const chalk = require("chalk");
 module.exports.run = async (client, message, args) => {
 const embed = await new Discord.RichEmbed().setDescription("").setColor(client.resolver.resolveColor('BLUE'));
 let mentioned = message.mentions.members.first() || message.guild.members.get(args[0]);
-let role = message.guild.roles.find(r => r == r.name("🔓"));
+let role = message.guild.roles.find(r => r.name == "🔓");
 
 if(message.member.hasPermission('MANAGE_MEMBERS') != true) return message.channel.send(noperms2);
 if(!mentioned) return message.channel.send(embed.setDescription("Please mention a member to recieve perms."));
