@@ -6,7 +6,7 @@ let mentioned = message.mentions.members.first() || message.guild.members.get(ar
 let role = message.guild.roles.find(r => r = r.name("🔓"));
 
 if(message.member.hasPermission('MANAGE_MEMBERS') != true) return message.channel.send(noperms2);
-if(!mentioned) return message.channel.send(embed.setDescription("Please mention a member to recieve perms.");
+if(!mentioned) return message.channel.send(embed.setDescription("Please mention a member to recieve perms."));
 try {
 if(!mentioned.hasRole(role)) {
 mentioned.removeRole(role, 'Take pic perms');
