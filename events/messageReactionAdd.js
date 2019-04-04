@@ -6,7 +6,7 @@ module.exports = async (client, reaction, user) => {
 const embed = await new Discord.RichEmbed().setDescription("").setColor(client.resolver.resolveColor('YELLOW'));
 let starboard = client.channels.find(c => c.name == "starboard");
 
-starboard.send(embed.setDescription(reaction.message.content));
+starboard.send(embed.setDescription(reaction.message.content).setName(reaction.message.author.user.username));
     }
   }
 };
