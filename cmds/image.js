@@ -5,7 +5,7 @@ const embed = await new Discord.RichEmbed().setDescription("").setColor(client.r
 let mentioned = message.mentions.members.first() || message.guild.members.get(args[0]);
 let role = message.guild.roles.find(r => r.name == "🔓");
 
-if(message.member.hasPermission('MANAGE_MEMBERS') != true) return message.channel.send(noperms2);
+if(message.member.hasPermission('MANAGE_MEMBERS') != true) return message.channel.send(embed.setDescription('You do not have perms to use this command'));
 if(!mentioned) return message.channel.send(embed.setDescription("Please mention a member to recieve perms."));
 try {
 if(mentioned.roles.has(role.id)) {
