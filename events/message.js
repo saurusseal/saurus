@@ -1,7 +1,9 @@
 var cleverbot = require("cleverbot.io"),
 bot = new cleverbot(process.env.cleverbotuser, process.env.cleverbotkey);
 module.exports = async (client, message) => {
-    bot.create(function (err, session) {//}
+    bot.create(function (err, session) {
+        //
+    }
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0].toLowerCase();
 if(message.author.bot) return;
