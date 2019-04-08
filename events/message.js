@@ -1,15 +1,15 @@
 var cleverbot = require("cleverbot.io"),
 bot = new cleverbot(process.env.cleverbotuser, process.env.cleverbotkey);
-
+  bot.create(function (err, session) {
 module.exports = async (client, message) => {
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0].toLowerCase();
 if(message.author.bot) return;
   if(message.channel.id == 564631599476506639) {
-  bot.create(function (err, session) {
+    console.log('pee pee poo poo')
+
   bot.ask(messageArray.join(" "), function (err, response) {
   message.channel.send(response);
-});
 });
   }
 if(message.content.toLowerCase().indexOf(client.config.prefix) !== 0) return;
@@ -18,3 +18,4 @@ const command = args.shift().toLowerCase();
 let commandfile = client.commands.get(cmd.slice(client.config.prefix.length));
 if(commandfile) commandfile.run(client, message, args);
 }
+  });
