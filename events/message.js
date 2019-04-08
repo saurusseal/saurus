@@ -8,12 +8,13 @@ if(message.author.bot) return;
   if(message.channel.id == 564631599476506639) {
     console.log('pee pee poo poo')
           await bot.create(function (err, session) {
+          });
             message.channel.startTyping()
   await bot.ask(messageArray.join(" "), function (err, response) {
     
   await message.channel.send(response).then(m => m.channel.stopTyping())
   });
-});
+
   }
 if(message.content.toLowerCase().indexOf(client.config.prefix) !== 0) return;
 const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
