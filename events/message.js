@@ -10,7 +10,7 @@ if(message.author.bot) return;
           await bot.create(function (err, session) {
           });
             message.channel.startTyping()
-  await bot.ask(messageArray.join(" "), function (err, response) {
+  await bot.ask(messageArray.join(" "), async function (err, response) {
     
   await message.channel.send(response).then(m => m.channel.stopTyping())
   });
