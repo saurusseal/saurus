@@ -18,8 +18,8 @@ if(message.author.bot) return;
   }
 if(message.content == "nigger") {
 if(message.author.hasPermission("KICK_MEMBERS") {
-message.delete();
 message.reply('no hard r in my domain retard');
+message.delete();
 }}
 if(message.content.toLowerCase().indexOf(client.config.prefix) !== 0) return;
 const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
