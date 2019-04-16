@@ -17,7 +17,7 @@ if(message.author.bot) return;
 
   }
 if(message.content == "nigger") {
-if(message.author.hasPermission("KICK_MEMBERS") {
+if(message.member.hasPermission("KICK_MEMBERS") {
 message.reply('no hard r in my domain retard');
 message.delete();
 }}
