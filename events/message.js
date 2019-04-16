@@ -5,17 +5,6 @@ module.exports = async (client, message) => {
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0].toLowerCase();
 if(message.author.bot) return;
-  if(message.channel.id == 564631599476506639) {
-    console.log('pee pee poo poo')
-          await bot.create(function (err, session) {
-          });
-            message.channel.startTyping()
-  await bot.ask(messageArray.join(" "), async function (err, response) {
-    
-  await message.channel.send(response).then(m => m.channel.stopTyping())
-  });
-
-  }
 if(message.content == "nigger") {
 if(message.member.hasPermission("KICK_MEMBERS") {
 message.reply('no hard r in my domain retard');
