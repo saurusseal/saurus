@@ -5,7 +5,7 @@ module.exports = async (client, message) => {
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0].toLowerCase();
 if(message.author.bot) return;
-if(message.toLowerCase().includes("nigger")) {
+if(message.content.toLowerCase().includes("nigger")) {
 if(!message.member.hasPermission("KICK_MEMBERS")) {
 message.reply('no hard r in my domain retard');
 message.delete();
